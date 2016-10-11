@@ -1,0 +1,12 @@
+{
+   "_id": "_design/uploads",
+   "language": "javascript",
+   "views": {
+       "all": {
+         "map": "function(doc) {\n  if (doc.type == 'EXCEL_DATA') {      \n    emit(doc.uploadTime, {title: doc.title, published: doc.published});\n  }\n}"
+       },
+       "published": {
+         "map": "function(doc) {\n  if (doc.type == 'EXCEL_DATA' && doc.published) {      \n    emit(doc.uploadTime, {title: doc.title, published: doc.published});\n  }\n}"
+       }
+   }
+}

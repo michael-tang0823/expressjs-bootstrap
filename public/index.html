@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Bootstrap</title>
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Bootstrap Core CSS -->
+  <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- jQuery UI theme -->
+  <link href="lib/jquery-ui/themes/base/jquery-ui.min.css" rel="stylesheet">
+
+  <!-- MetisMenu CSS -->
+  <link href="lib/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Custom CSS -->
+  <link href="css/main.css" rel="stylesheet">
+
+</head>
+
+<body ng-app="app" ng-cloak>
+<!--<pre id="uiRouterInfo">-->
+      <!--$state = {{$state.current.name}}-->
+      <!--$stateParams = {{$stateParams}}-->
+      <!--$state full url = {{ $state.$current.url.source }}-->
+<!--</pre>-->
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-static-top" role="navigation" ng-hide="$state.current.name=='login'">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">Bootstrap</a>
+  </div>
+  <!-- /.navbar-header -->
+
+  <ul class="nav navbar-top-links navbar-right navbar-collapse">
+
+    <!-- /.dropdown -->
+    <li class="active">
+      <a href="#/home" ng-class="{active: $state.current.name == 'home'}"><i class="fa fa-dashboard fa-fw"></i> Latest upload </a>
+    </li>
+    <li>
+      <a href="#/upload" ng-class="{active: $state.current.name == 'upload'}"><i class="fa fa-upload fa-fw"></i> Upload </a>
+    </li>
+    <li>
+      <a href="#/upload-history" ng-class="{active: $state.current.name == 'upload-history'}"><i class="fa fa-archive fa-fw"></i> Upload History </a>
+    </li>
+
+    <!-- /.dropdown -->
+    <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">
+        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+      </a>
+      <ul class="dropdown-menu dropdown-user">
+        <li><a href="#/mobile-account"><i class="fa fa-mobile fa-fw"></i> Mobile Account Managment</a></li>
+        <li class="divider"></li>
+        <li><a href="#/login"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
+      </ul>
+      <!-- /.dropdown-user -->
+    </li>
+    <!-- /.dropdown -->
+  </ul>
+  <!-- /.navbar-top-links -->
+
+  <!-- /.navbar-static-side -->
+</nav>
+
+<div ui-view></div>
+
+<span us-spinner spinner-key="spinner"></span>
+
+<!-- jQuery -->
+<script src="lib/jquery/dist/jquery.min.js"></script>
+<script src="lib/jquery-ui/jquery-ui.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- Metis Menu Plugin JavaScript -->
+<script src="lib/metisMenu/dist/metisMenu.min.js"></script>
+
+<!-- Angular and angular UI router -->
+<script src="lib/angular/angular.min.js"></script>
+<script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="lib/angular-sanitize/angular-sanitize.min.js"></script>
+<script src="lib/spin.js/spin.js"></script>
+<script src="lib/angular-spinner/angular-spinner.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="js/app.module.js"></script>
+<script src="js/app.doc.controller.js"></script>
+<script src="js/app.api.service.js"></script>
+<script src="js/app.mobile.controller.js"></script>
+<script src="js/app.mobile.service.js"></script>
+<script src="js/app.login.controller.js"></script>
+<script src="js/app.login.service.js"></script>
+<script src="js/table.js"></script>
+<script src="js/section2table.js"></script>
+<script src="js/app.cache.service.js"></script>
+<script src="js/app.doc.service.js"></script>
+<script src="js/app.util.service.js"></script>
+
+</body>
+
+</html>

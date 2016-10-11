@@ -1,0 +1,9 @@
+{
+   "_id": "_design/mobile-account",
+   "language": "javascript",
+   "views": {
+       "all": {
+           "map": "function(doc) {\n  if (doc.type == 'MOBILE_ACCOUNT') {      \n    emit(doc.email, null);\n  }\n}"
+       }
+   }
+}
